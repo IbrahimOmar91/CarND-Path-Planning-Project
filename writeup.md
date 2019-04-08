@@ -5,13 +5,12 @@ Foreach car in them i got its data and predict the next position **S** for each 
 For our new path point to be calculated we have to make sure that the path is collision free, within the acceleration and jerk limits.
 
 ### This could be done by the following steps:
-Check for the other car to see its lane and distance from us<br>
+####Check for the other car to see its lane and distance from us<br>
 `if it is in the same lane and 25 meters or closer to us so we set a flag [carFront] to true.`<br>
 `if it is on the right lane and within 30m front and 8m back we set a flag [carOnRight] to true.`<br>
 `if it is on the left lane and within 30m front and 8m back we set a flag [carOnLeft] to true.`<br>
 
-
-Based on the flags we decide:
+####Based on the flags we decide:
 >    if car in front whatever the lane, we decelerate 'reduce speed by 0.4'<br>
 >    then check the lane:<br>
 >        if lane 0 and right lane is free >> change lane to center '1'<br>
