@@ -1,7 +1,7 @@
 ## Here What i did,
-First we have to initialize the car, so i started with 0 speed and lane 1 **Center Lane**
-Then got the sensors data of all the cars to decide what to do.
-Foreach car in them i got its data and predict the next position **S** for each one.
+First we have to initialize the car, so i started with 0 speed and lane 1 **Center Lane**<br>
+Then got the sensors data of all the cars to decide what to do.<br>
+Foreach car in them i got its data and predict the next position **S** for each one.<br>
 For our new path point to be calculated we have to make sure that the path is collision free, within the acceleration and jerk limits.
 
 ### This could be done by the following steps:
