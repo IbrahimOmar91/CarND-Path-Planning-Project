@@ -6,9 +6,9 @@ For our new path point to be calculated we have to make sure that the path is co
 
 ### This could be done by the following steps:
 -Check for the other car to see its lane and distance from us
-`if it is in the same lane and 25 meters or closer to us so we set a flag **carFront** to true.
-`if it is on the right lane and within 30m front and 8m back we set a flag **carOnRight** to true.
-`if it is on the left lane and within 30m front and 8m back we set a flag **carOnLeft** to true.
+`if it is in the same lane and 25 meters or closer to us so we set a flag **carFront** to true.`
+`if it is on the right lane and within 30m front and 8m back we set a flag **carOnRight** to true.`
+`if it is on the left lane and within 30m front and 8m back we set a flag **carOnLeft** to true.`
 
 
 > Based on the flags we decide:
