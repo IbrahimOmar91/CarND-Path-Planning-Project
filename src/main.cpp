@@ -275,12 +275,12 @@ int main() {
                 }
               }
               else if (lane != 2 && d > (4*(lane+1)) && d < (4*(lane+2))) {
-                if ((s > (car_s - 6)) && (s < (car_s + 30))) { // -10 20 _ -20 +30
+                if ((s > (car_s - 8)) && (s < (car_s + 30))) { // -10 20 _ -20 +30
                   carOnRight = true; // there is a car to the left side
                 }
               }
               else if (lane != 0 && d > (4 * (lane-1)) /* 0 for lane 1 & 4 for lane 2*/ && d < ( 4 * (lane)) /* 4 for lane 1 & 8 for lane 2*/) {
-                if ((s > (car_s - 6)) && (s < (car_s + 30))) { // -10 20 _ -20 +30
+                if ((s > (car_s - 8)) && (s < (car_s + 30))) { // -10 20 _ -20 +30
                   carOnLeft = true; // there is a car to the left side
                 }
               }
@@ -288,7 +288,7 @@ int main() {
 
             if (carFront) {
               if (cmd_vel > frontSpeed)
-                cmd_vel -= 0.5; // 0.5
+                cmd_vel -= 0.4; // 0.5
 
               if (lane == 0 && !carOnRight) {
                 lane = 1;
@@ -304,8 +304,8 @@ int main() {
               }
 
             }
-            else if (cmd_vel <= 49.4) { // 49.5
-              cmd_vel += 0.5; // 0.5
+            else if (cmd_vel <= 49.5) { // 49.5
+              cmd_vel += 0.4; // 0.5
             }
 
             // Create a list of widely spaced (x,y) waypoints, evenly spaced at 30m
@@ -412,13 +412,7 @@ int main() {
               next_x_vals.push_back(x_point);
               next_y_vals.push_back(y_point);
             }
-
-
-
-
-
-
-            // TODO: define a path made up of (x,y) points that the car will visit sequentially every .02 seconds
+            
             msgJson["next_x"] = next_x_vals;
             msgJson["next_y"] = next_y_vals;
 
