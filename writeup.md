@@ -1,14 +1,14 @@
 ## Here What i did,
-* first we have to initialize the car, so i started with 0 speed and lane 1 -Center Lane-
-then got the sensors data of all the cars to decide what to do
-foreach car in them i got its data and predict the next position 'S' for each one
-for our new path point to be calculated we have to make sure that the path is collision free, within the acceleration and jerk limits
+First we have to initialize the car, so i started with 0 speed and lane 1 **Center Lane**
+Then got the sensors data of all the cars to decide what to do.
+Foreach car in them i got its data and predict the next position **S** for each one.
+For our new path point to be calculated we have to make sure that the path is collision free, within the acceleration and jerk limits.
 
 ### This could be done by the following steps:
 >Check for the other car to see its lane and distance from us
->if it is in the same lane and 25 meters or closer to us so we set a flag 'carFront' to true
->if it is on the right lane and within 30m front and 8m back we set a flag 'carOnRight' to true
->if it is on the left lane and within 30m front and 8m back we set a flag 'carOnLeft' to true
+ >if it is in the same lane and 25 meters or closer to us so we set a flag **carFront** to true
+ >if it is on the right lane and within 30m front and 8m back we set a flag **carOnRight** to true
+ >if it is on the left lane and within 30m front and 8m back we set a flag **carOnLeft** to true
 
 
 > Based on the flags we decide:
