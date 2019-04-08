@@ -1,5 +1,5 @@
 ## Here What i did,
-First we have to initialize the car, so i started with 0 speed and lane 1 **Center Lane**<br>
+First we have to initialize the car, so i started with 0 speed and lane to the center lane [1]<br>
 Then got the sensors data of all the cars to decide what to do.<br>
 Foreach car in them i got its data and predict the next position **S** for each one.<br>
 For our new path point to be calculated we have to make sure that the path is collision free, within the acceleration and jerk limits.
@@ -12,11 +12,11 @@ For our new path point to be calculated we have to make sure that the path is co
 
 #### Based on the flags we decide:
 if car in front whatever the lane, we decelerate **reduce speed by 0.4**, then check the lane:<br>
-.. if left lane **0** and right lane **2** is free >> change lane to center '1'<br>
-.. if center lane **1** then check other two lanes:<br>
-.... if left lane **0** is free >> change lane to left **0**<br>
-.... if left lane **0** is occupied and right **2** is free >> change lane to right **2**<br>
-.. if lane 2 and center lane is free >> change lane to center **1**<br>
+.. if left lane [0] and right lane [2] is free >> change lane to center '1'<br>
+.. if center lane [1] then check other two lanes:<br>
+.... if left lane [0] is free >> change lane to left [0]br>
+.... if left lane [0] is occupied and right [2] is free >> change lane to right [2]br>
+.. if lane 2 and center lane is free >> change lane to center [1]br>
 if there is not car in front and speed is lower than 49.5 >> accelerate<br>
 
 >Then Create a list of widely spaced (x,y) waypoints, evenly spaced at 30m Later we will interpolate these waypoints with a spline and fill it in with more points that control spline<br>
